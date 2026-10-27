@@ -1,0 +1,299 @@
+/* ============================================================ */
+/* ESTILOS FUTSTORE - TEMA CLEAN COM HEADER E FOOTER ESCUROS    */
+/* ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f1f5f9;
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar Escura e Elegante */
+.navbar {
+    background: #0f172a;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+/* Botões do Topo (Cápsula adaptados para o fundo escuro) */
+.carrinho-topo, 
+.navbar a[onclick*="login"], 
+.navbar button[onclick*="login"],
+#btn-usuario-topo {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.carrinho-topo:hover, 
+.navbar a[onclick*="login"]:hover, 
+.navbar button[onclick*="login"]:hover,
+#btn-usuario-topo:hover {
+    background: #ffffff;
+    color: #0f172a;
+    border-color: #ffffff;
+}
+
+/* Container Principal */
+.container {
+    max-width: 1200px;
+    margin: 110px auto 50px auto;
+    padding: 0 20px;
+    flex: 1;
+    width: 100%;
+}
+
+/* Cabeçalho de Categoria e Voltar */
+.cabecalho-categoria {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.btn-voltar {
+    color: #64748b;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s;
+    width: fit-content;
+}
+
+.btn-voltar:hover {
+    color: #0f172a;
+}
+
+.cabecalho-categoria h1 {
+    font-size: 28px;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+/* Carrinho */
+#itens-carrinho {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+#footer-carrinho {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+#total-geral-carrinho {
+    color: #0f172a;
+    font-weight: 800;
+}
+
+/* Grid de Produtos Gerais */
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.card-produto {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.card-produto img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    background: #ffffff;
+}
+
+.card-produto h3 {
+    font-size: 16px;
+    color: #0f172a;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.card-produto .descricao {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 12px;
+    flex: 1;
+}
+
+.card-produto .preco {
+    font-size: 18px;
+    font-weight: 800;
+    color: #2563eb;
+    margin-bottom: 14px;
+}
+
+.btn-comprar {
+    background: #0f172a;
+    color: #ffffff;
+    border: none;
+    padding: 11px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-comprar:hover {
+    background: #2563eb;
+}
+
+/* Tela Inicial - Categorias (Força os 4 cards lado a lado) */
+.boas-vindas {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.boas-vindas h1 {
+    font-size: 34px;
+    color: #0f172a;
+    margin-bottom: 8px;
+    font-weight: 800;
+}
+
+.boas-vindas h2 {
+    font-size: 20px;
+    color: #2563eb;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.boas-vindas p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+.grid-categorias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 1024px) {
+    .grid-categorias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card-categoria {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 30px 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.card-categoria:hover {
+    transform: translateY(-4px);
+    border-color: #2563eb;
+}
+
+.icone-categoria {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.card-categoria h3 {
+    font-size: 18px;
+    color: #0f172a;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.card-categoria p {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 18px;
+}
+
+.btn-acessar {
+    display: inline-block;
+    background: #eff6ff;
+    color: #2563eb;
+    border: 1px solid #bfdbfe;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.btn-acessar:hover {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+}
+
+/* Rodapé Escuro e Elegante */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #0f172a;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #94a3b8;
+    font-size: 13px;
+    margin-top: auto;
+}
+
+footer a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 600;
+}
